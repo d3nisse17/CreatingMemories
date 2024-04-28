@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-nav',
@@ -18,11 +19,15 @@ export class TopNavComponent implements OnInit{
     }
   ]
   constructor(
+    private router: Router
   ) {
   }
 
   ngOnInit(): void {
   }
   
+  goToHome() { 
+    this.router.navigate(['/app']);
+  }
 }
 
