@@ -7,10 +7,10 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'app'
+        redirectTo: ''
       },
       {
-        path: 'app',
+        path: '',
         loadChildren: () => import('./main/main.module').then(m => m.MainModule)
       },
       {

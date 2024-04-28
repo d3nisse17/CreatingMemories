@@ -27,7 +27,7 @@ export class TopNavComponent implements OnInit{
   }
   
   goToHome() { 
-    this.router.navigate(['/app']);
+    this.router.navigate(['/']);
   }
 }
 
