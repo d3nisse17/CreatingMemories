@@ -1,0 +1,141 @@
+.card {
+  /* Display & Box Model */
+  border: 1px solid $gray-lightest !important;
+  box-shadow: $box-shadow;
+  border-radius: 6px !important;
+  padding: 1.5 * $base-size;
+
+  &__title {
+    /* Text */
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $base-size;
+    line-height: 1.5 * $base-size;
+  }
+
+  &--dark {
+    /* Color */
+    background-color: $navy !important;
+    color: $white !important;
+  }
+
+  &--outline {
+    /* Display & Box Model */
+    border: 1px solid $gray-2 !important;
+    box-shadow: none;
+    border-radius: 6px !important;
+    padding: 1.5 * $base-size;
+  }
+
+  &--loading {
+    display: flex !important;
+    height: 14rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--certified-loading {
+    display: flex !important;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--overall-report {
+    border: 2px solid $gray !important;
+    box-shadow: none;
+    border-radius: 6px !important;
+    padding: 1.5 * $base-size;
+    margin-bottom: 1rem;
+  }
+
+  &--monthly-report {
+    border: 2px solid $gray-2 !important;
+    box-shadow: none;
+    border-radius: 6px !important;
+    padding: 1.5 * $base-size;
+  }
+}
+
+// LAYOUT
+.jumbotron {
+  border: 1px solid $gray-lightest;
+
+  &--light {
+    background-color: $white !important;
+  }
+}
+
+// TABS
+.card-tabs {
+  margin-bottom: $base-size;
+
+  &--divided {
+    padding: 1rem !important;
+  }
+
+  .nav-pills .nav-link {
+    /* Color */
+    color: $dark-purple;
+    background-color: $bg-color;
+
+    /* Display & Box Model */
+    margin-right: 0.625 * $base-size;
+    margin-bottom: 0.625 * $base-size;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    /* Color */
+    color: $orange;
+    background-color: $light-orange;
+  }
+
+  .tab-icon {
+    /* Color */
+    fill: $gray;
+
+    /* Display & Box Model */
+    height: 1.5 * $base-size;
+    margin: 6px 10px;
+    width: 1.5 * $base-size;
+
+    &:active,
+    &.active {
+      fill: $orange !important;
+    }
+  }
+
+  .toggle-group {
+    /* Color*/
+    background-color: $bg-color;
+
+    /* Display & Box Model */
+    border: 1px solid $gray-2;
+    border-radius: 6px;
+    padding: 0;
+    min-width: max-content;
+
+    .toggle-icon:first-of-type {
+      border-right: 1px solid $gray-2 !important;
+    }
+  }
+
+  .toggle-icon {
+    /* Color */
+    background-color: transparent;
+
+    /* Display & Box Model */
+    border: none;
+    padding: 0;
+    
+    &:active,
+    &.active {
+      .tab-icon {
+        fill: $orange !important;
+      }
+    }
+  }
+}
+

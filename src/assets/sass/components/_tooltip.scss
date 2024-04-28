@@ -1,0 +1,10 @@
+.tooltip-inner {
+  /* Box Model */
+  background-color: $light-orange !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  max-width: 12.5 * $base-size !important;
+
+  /* Color */
+  color: $dark-purple !important;
+}

@@ -1,0 +1,201 @@
+@import "../base/variables";
+
+body {
+  /* Text */
+  font-family: 'Inter', sans-serif !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 0.875 * $base-size !important;
+  font-size: clamp(0.875rem, 0.8579545454545454rem + 0.08522727272727272vw, 1.0625rem) !important;
+  color: $navy !important;
+}
+
+.value {
+  /* Text */
+  font-family: 'Inter', sans-serif !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 0.875 * $base-size !important;
+
+  &--max {
+    font-weight: 400 !important;
+  }
+}
+
+h1 {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 2.25 * $base-size !important;
+  line-height: 3.125 * $base-size;
+}
+
+h2 {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 1.75 * $base-size !important;
+  line-height: 2.625 * $base-size;
+}
+
+h3 {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 1.5 * $base-size !important;
+  line-height: 2 * $base-size;
+}
+
+h4,
+.title {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 1.125 * $base-size !important;
+  line-height: 1.75 * $base-size;
+}
+
+h5,
+.label-title {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: $base-size !important;
+  line-height: 1.75 * $base-size;
+}
+
+h6,
+.label-subtitle {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: $base-size !important;
+  line-height: 1.75 * $base-size;
+}
+
+
+.subtitle,
+input {
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: $base-size;
+  line-height: 1.75 * $base-size;
+}
+
+input::placeholder {
+  /* Text */
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+.subtitle {
+  color: $dark-purple;
+  text-align: left;
+}
+
+p,
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 0.875 * $base-size;
+}
+
+.input-title {
+  /* Text */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 0.625 * $base-size;
+  line-height: 0.875 * $base-size;
+
+  /* identical to box height, or 140% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.code {
+  /* Text */
+  font-family: 'Roboto Mono', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text-orange {
+  color: $orange !important;
+}
+
+.text-navy {
+  color: $navy;
+}
+
+.page-title {
+  margin: 2 * $base-size 0;
+  color: $navy;
+}
+
+// ROBIN WAS HERE Edited: 22/07/2022
+.label-group {
+  text-align: start;
+
+  &--border-bottom {
+    &::after {
+      content: "";
+      display: block;
+
+      border-top: 1px solid $gray-2;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.label {
+  color: $dark-purple;
+  font-size: 0.625rem; // base sa prototype 10/14
+  text-transform: uppercase ;
+
+  &--gray {
+    color: $gray;
+  }
+}
+
+.value {
+  color: $black;
+  font-size: 1rem !important; // base sa prototype 16/28
+  font-weight: 400 !important;
+}
+
+.description {
+  &--white {
+    color: $white;
+  }
+}
+
+.error {
+  color: $brand-danger;
+  text-decoration: underline;
+
+  &--clickable {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.125rem !important;
+  }
+}

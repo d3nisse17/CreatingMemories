@@ -1,0 +1,116 @@
+ngb-datepicker {
+  // Header Selection (Month & Year)
+  .custom-select {
+    /* Color */
+    border-color: $gray-2;
+    color: $dark-purple;
+
+    /* Box Model */
+    border-radius: 6px;
+    margin: 0 .25 * $base-size;
+  }
+}
+
+.ngb-dp-arrow-btn {
+  /* Box Model */
+  margin: 0 !important;
+  min-width: auto !important;
+}
+
+.ngb-dp-navigation-select {
+  select {
+    margin: .25 * $base-size !important;
+  }
+}
+
+.ngb-dp-header {
+  padding-top: 0 !important;
+}
+
+// Day Labels
+.ngb-dp-week-number,
+.ngb-dp-weekday {
+  /* Color */
+  color: $dark-purple;
+
+  /* Text */
+  font-style: normal;
+}
+
+// Date Picker in Calendar
+[ngbDatepickerDayView] {
+  border-radius: 6px;
+}
+
+// Calendar Number or Days
+.ngb-dp-day {
+  color: $dark-purple;
+
+  .btn-light:hover {
+    /* Color */
+    background-color: $brand-primary;
+    color: $white;
+  }
+}
+
+// DATEPICKER
+.form-datepicker {
+  .datepicker {
+    /* Background Color */
+    background-color: $white !important;
+
+    /* Box Model */
+    border: 1px solid $dark-purple;
+    border-radius: 6px;
+
+    /* Color */
+    color: $navy !important;
+  }
+
+  .input-title {
+    /* Color */
+    color: $gray;
+
+    /* Text */
+    font-size: calc(1rem * 0.7);
+    font-weight: 400 !important;
+
+    /* Display & Box Model */
+    align-self: flex-start;
+    display: flex;
+    margin-top: 0.5 * $base-size;
+    margin-left: 0.65 * $base-size;
+  }
+
+  .input-group {
+    /* Box Model */
+    width: 100%;
+    max-width: 100% !important;
+    border: none !important;
+
+    input {
+      background-color: $white !important;;
+    }
+  }
+
+  .input-group-text {
+    /* Box Model */
+    border: none !important;
+    padding-right: 0;
+
+    i-feather {
+      color: $dark-purple !important;
+    }
+  }
+
+  .form-control {
+    border: none !important;
+
+    /* Background Color */
+    background-color: $white !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}

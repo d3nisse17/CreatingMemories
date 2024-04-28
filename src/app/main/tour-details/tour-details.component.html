@@ -1,0 +1,76 @@
+<app-top-nav></app-top-nav>
+<div class="package">
+    <div class="tour">
+        <div class="tour__back-button" (click)="back()">
+            <img src="assets/icons/arrow-left.svg"> Back
+        </div>
+        <div class="tour-header">
+            <h1 class="tour-title">{{tourPackages.title}} - <span class="tour-price">{{tourPackages.price}}</span></h1>
+        </div>
+        <div class="tour__img-container">
+            <img class="package-img" [src]="tourPackages.img">
+        </div>
+        <div class="tour-details">
+            <div class="tour-details__tour-itinerary">
+                <h3>Itinerary</h3>
+                <span class="tour-details__tour-itinerary--time"><img src="assets/icons/map-pin.svg"> 8:00AM - Meetup</span>
+                <div class="tour-details__tour-itinerary--place" *ngFor="let tour of tourPackages.places">
+                    <span><img src="assets/icons/tree.png"> {{tour}}</span>
+                </div>
+                <span class="tour-details__tour-itinerary--time"><img src="assets/icons/map-pin.svg"> 5:00PM - to Drop-off Point</span>
+            </div>
+            <div class="tour-details__tour-inclusion">
+                <h3>What's Included</h3>
+                <div class="tour-details__tour-itinerary--place">
+                    <span><img src="assets/icons/check-circle.svg"> English / Filipino-speaking guide</span>
+                    <span><img src="assets/icons/check-circle.svg"> Lunch</span>
+                    <span><img src="assets/icons/check-circle.svg"> Boat Transfer</span>
+                    <span><img src="assets/icons/check-circle.svg"> Life Vest</span>
+                    <span><img src="assets/icons/x.svg"> Tips and gratitudes</span>
+                    <span><img src="assets/icons/x.svg"> Other personal expense</span>
+                    <span><img src="assets/icons/x.svg"> Environmental Fee (Php 200.00)</span>
+                    <span><img src="assets/icons/x.svg"> Lagoon Fee (Php 200.00)</span>
+                    <span><img src="assets/icons/x.svg"> Kayak Rental</span>
+                    <span><img src="assets/icons/x.svg"> Snorkeling mask and gears</span>
+                </div>
+            </div>
+            <div class="tour-details__tour-itinerary">
+                <h3>What to bring</h3>
+                <div class="tour-details__tour-itinerary--place">
+                    <span>• Sunscreen</span>
+                    <span>• Sunglasses</span>
+                    <span>• Caps or hats</span>
+                    <span>• Swimwear</span>
+                    <span>• Change of Clothes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="message-container" id="contact-us">
+    <h1 class="message-title">Contact us for Bookings and Inquiries</h1>
+    <div class="contact-us">
+        <div class="contact-us__content">
+            <span class="contact-us__title">Contact Number: </span> 
+            <div class="contact-us__number">
+                <span>09664427906 - Globe </span>
+                <span>09616434454 - Smart </span>
+            </div>
+        </div>
+        <div class="contact-us__content">
+            <span  class="contact-us__title">Email Address: </span> <span>creatingmemories1967&#64;gmail.com</span>
+        </div>
+        <div class="contact-us__content">
+            <span  class="contact-us__title">Office Address: </span> <span>Pops District Brgy. Corong Corong El Nido Palawan, Philippines</span>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Pops District Brgy. Corong Corong El Nido Palawan, Philippines&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <a href="https://embed-googlemap.com">embed google map</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<button class="sticky-button" (click)="scrollTo('contact-us')">Contact Us</button>
+<app-footer></app-footer>

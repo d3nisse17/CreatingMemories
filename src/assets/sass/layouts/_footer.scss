@@ -1,0 +1,25 @@
+footer {
+	/* Display & Box Model */
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	width: 100%;
+    background-color: white;
+	border-top: 1px solid #e6e6e6;
+	display: flex;
+	justify-content: center;
+	.footer-border {
+		/* Display & Box Model */
+		width: 100%;
+		height: 0;
+		border-top: 1px solid #e6e6e6;
+	}
+
+	.footer__full-footer {
+		/* Box Model */
+		padding: 0 0 120px 0;
+
+		/* Other */@at-rootclear: both;
+	}
+}

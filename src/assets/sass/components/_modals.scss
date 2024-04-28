@@ -1,0 +1,68 @@
+.confirmation-modal {
+  .title {
+    color: $navy;
+  }
+}
+
+.modal-content {
+  /* Box Model */
+  border-radius: 8px !important;
+  border: none !important;
+  padding: 0.5 * $base-size !important;
+}
+
+.modal-backdrop {
+  background-color: $navy !important;
+
+  &.show {
+    opacity: 0.8 !important;
+  }
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-footer {
+  /* Display & Box Model */
+  border-top: none !important;
+  justify-content: center !important;
+
+  .btn {
+    /* Box Model */
+    min-width: 8.375 * $base-size !important;
+    min-height: 2.5 * $base-size !important;
+  }
+}
+
+.task-zero-modal {
+  .modal-content__container {
+    height: calc(100vh - 26rem);
+    overflow: auto;
+  }
+
+  .table-borderless thead tr {
+    background-color: #FFF !important;
+  }
+}
+
+.monthly-stats-modal {
+  margin: 1rem;
+  .modal-content__container {
+    height: calc(100vh - 26rem);
+    overflow: auto;
+  }
+}
+
+.subscription-modal {
+  .modal-content__container {
+    height: calc(100vh - 26rem);
+    overflow: auto;
+  }
+
+  .table-borderless thead tr {
+    background-color: #FFF !important;
+  }
+}
+
+

@@ -1,0 +1,199 @@
+/* 
+*  CSS VARIABLE TABLE OF CONTENTS
+*   
+**  1.0 - Base size
+**  2.0 - Colors
+***  2.1 - Neutrals
+***  2.2 - Main
+***  2.3 - Second
+***  2.4 - Other
+***  2.5 - Opacity
+***  2.6 - Shadow
+***  2.7 - Lighten & Darken
+***  2.8 - Brand Variables
+**  3.0 - Forms
+*/
+
+/** 1.0 - Base  **/
+$base-size: 1rem;
+$margin-base: 10px;
+$padding-base: 10px;
+
+/*===========================================*/
+
+/** 2.0 - Colors  **/
+
+/***  2.1 - Neutrals***/
+$white: #ffffff;
+$black: #000000; //BOX SHADOW
+$gray: #9298b2;
+$gray-1: #c2d1de;
+$gray-2: #e4e9ee;
+
+/***  2.2 - Main ***/
+$bg-color: #f7f9fc;
+$bg-color-1: #e3e9ef;
+$blue: #4087BA;
+$blue-1: #73afd5;
+$navy: #171436;
+$orange: #dd853d;
+$dark-orange: #ca722a;
+
+/***  2.3 - Second ***/
+$red: #ed3f3f;
+$red-1: #ff4b55;
+$dark-purple: #46436a;
+$purple: #a06cf7;
+$pink: #ec62d5;
+$green: #2ba8a0;
+$yellow: #e09150;
+
+/***  2.4 - neutral ***/
+$light-green: #dff5f5;
+$light-purple: #f4eaff;
+$light-orange: #ffefe1;
+$light-blue: #e1f5ff;
+$light-red: #ffeaea;
+$light-red-1: #ffe2e2;
+
+/*** 2.5 - Opacity ***/
+$red-opacity-10: rgba($red, 0.1);
+$green-opacity-10: rgba($green, 0.1);
+$yellow-opacity-18: rgba($yellow, 0.18);
+$blue-opacity-10: rgba($blue, 0.1);
+$navy-opacity-10: rgba($navy, 0.1);
+$navy-opacity-30: rgba($navy, 0.3);
+
+/*** 2.6 - Shadow ***/
+/*--shadow-1:  0px 8px 16px rgba(23, 20, 54, 0.06), 0px 8px 8px rgba(23, 20, 54, 0.08);
+--shadow:  0px 15px 20px rgba(64, 135, 186, 0.12);*/
+$box-shadow: 0px 18px 40px 0px rgba(112, 144, 176, 0.12);
+
+/***  2.7 - Lighten & Darken ***/
+/****  Blue ****/
+$blue-base: $blue;
+$blue-darkest: darken($blue-base, 32%) !default;
+$blue-darker: darken($blue-base, 24%) !default;
+$blue-dark: darken($blue-base, 16%) !default;
+$blue-light: lighten($blue-base, 16%) !default;
+$blue-lighter: lighten($blue-base, 32%) !default;
+$blue-lightest: lighten($blue-base, 44%) !default;
+
+/**** Red ****/
+$red-base: $red !default;
+$red-darkest: darken($red, 32%) !default;
+$red-darker: darken($red, 24%) !default;
+$red-dark: darken($red, 16%) !default;
+$red-light: lighten($red, 16%) !default;
+$red-lighter: lighten($red, 32%) !default;
+$red-lightest: lighten($red, 44%) !default;
+
+/**** Yellow ****/
+$yellow-base: $yellow !default;
+$yellow-darkest: darken($yellow-base, 32%) !default;
+$yellow-darker: darken($yellow-base, 24%) !default;
+$yellow-dark: darken($yellow-base, 16%) !default;
+$yellow-light: lighten($yellow-base, 16%) !default;
+$yellow-lighter: lighten($yellow-base, 32%) !default;
+$yellow-lightest: lighten($yellow-base, 44%) !default;
+
+/****  Green ****/
+$green-base: $green !default;
+$green-darkest: darken($green-base, 32%) !default;
+$green-darker: darken($green-base, 24%) !default;
+$green-dark: darken($green-base, 16%) !default;
+$green-light: lighten($green-base, 16%) !default;
+$green-lighter: lighten($green-base, 32%) !default;
+$green-lightest: lighten($green-base, 44%) !default;
+
+/**** Gray ****/
+$gray-base: $gray !default;
+$gray-darkest: darken($gray-base, 32%) !default;
+$gray-darker: darken($gray-base, 24%) !default;
+$gray-dark: darken($gray-base, 16%) !default;
+$gray-light: lighten($gray-base, 16%) !default; //SOCIAL MEDIA LOGIN TEXT
+$gray-lighter: lighten($gray-base, 24%) !default;
+$gray-lightest: lighten($gray-base, 44%) !default; //BORDER COLOR
+
+/**** Orange ****/
+$orange-base: $orange !default;
+$orange-darkest: darken($orange-base, 32%) !default;
+$orange-darker: darken($orange-base, 24%) !default;
+$orange-dark: darken($orange-base, 16%) !default;
+$orange-light: lighten($orange-base, 16%) !default;
+$orange-lighter: lighten($orange-base, 32%) !default;
+$orange-lightest: lighten($orange-base, 44%) !default;
+
+/***  2.8 - Brand Variables ***/
+$brand-primary: $blue;
+$brand-secondary: $orange;
+$brand-tertiary: $navy;
+
+$brand-success: $green !default; // green
+$brand-info: $blue !default; // light blue
+$brand-warning: $yellow !default; // amber
+$brand-pending: $orange !default; // yellow
+$brand-danger: $red !default; // red
+$brand-attention: $red !default; // orange
+
+/***  2.9 - Gradients ***/
+
+$bronze: linear-gradient(100.92deg, #996f57 -2.7%, #bc9785 53.71%, #fce0ce 107.81%);
+$silver: linear-gradient(100.92deg, #80869e -2.7%, #e9e9e9 52.56%, #efefef 107.81%);
+$gold: linear-gradient(100.92deg, #d29e3e -2.7%, #f0cb6e 53.71%, #ffeca9 107.81%);
+$platinum: linear-gradient(100.92deg, #ced4d6 -2.7%, #eaebeb 60.61%, #ecf1f2 107.81%);
+
+$bronze-bar-opacity-7: linear-gradient(
+  100.91deg,
+  rgba(153, 111, 87, 0.7) 2.67%,
+  rgba(188, 151, 133, 0.7) 55.26%,
+  rgba(252, 224, 206, 0.7) 105.7%
+);
+$silver-bar-opacity-7: linear-gradient(
+  100.91deg,
+  rgba(128, 134, 158, 0.3) 2.67%,
+  rgba(233, 233, 233, 0.3) 54.19%,
+  rgba(239, 239, 239, 0.3) 105.7%
+);
+$gold-bar-opacity-7: linear-gradient(
+  100.91deg,
+  rgba(210, 158, 62, 0.7) 2.67%,
+  rgb(240, 203, 110, 0.7) 55.26%,
+  rgba(255, 236, 169, 0.7) 105.7%
+);
+$platinum-bar-opacity-7: linear-gradient(216.56deg, rgba(207, 207, 209, 0.9) 4.11%, rgb(141, 142, 146, 0.9) 83.3%);
+
+$bronze-bar-bg: linear-gradient(100.91deg, #996f57 2.67%, #bc9785 55.26%, #fce0ce 105.7%);
+$silver-bar-bg: linear-gradient(100.91deg, #80869e 2.67%, #e9e9e9 54.19%, #efefef 105.7%);
+$gold-bar-bg: linear-gradient(100.91deg, #d29e3e 2.67%, #f0cb6e 55.26%, #ffeca9 105.7%);
+$platinum-bar-bg: linear-gradient(216.56deg, #cfcfd1 4.11%, #8d8e92 83.3%);
+$bronze-bar: rgba(#4f3e32, 0.4);
+$silver-bar: rgba(#47484a, 0.4);
+$gold-bar: rgba(#554630, 0.4);
+$platinum-bar: rgba(#3d404f, 0.4);
+
+/*===========================================*/
+
+/** 3.0 - Forms  **/
+
+//$form-floating-height:            add(3.5rem, $input-height-border);
+$form-floating-line-height: 1.25;
+//$form-floating-padding-x:         $input-padding-x;
+$form-floating-padding-y: 1rem;
+$form-floating-input-padding-t: 1.625rem;
+$form-floating-input-padding-b: 0.625rem;
+$form-floating-label-opacity: 0.65;
+$form-floating-label-transform: scale(0.7) translateY(-0.5rem) translateX(0.15rem);
+$form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+
+/*** 4.0 - BREAKPOINTS ***/
+// Sadly not working
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

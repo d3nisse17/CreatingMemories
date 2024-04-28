@@ -1,0 +1,42 @@
+.custom-slider {
+  .ngx-slider {
+    .ngx-slider-bar {
+      background: $gray-1;
+      height: 4px;
+    }
+
+    .ngx-slider-selection {
+      background: $dark-purple;
+    }
+
+    .ngx-slider-pointer {
+      width: 1.5 * $base-size;
+      height: 1.5 * $base-size;
+      background-color: $dark-purple;
+      bottom: 0;
+      top: -10px;
+      box-shadow: $box-shadow;
+    }
+
+    .ngx-slider-pointer:after {
+      display: none;
+    }
+
+    .ngx-slider-bubble {
+      bottom: 14px;
+      color: $dark-purple;
+      font-size: .875 * $base-size;
+      font-weight: 600;
+    }
+
+    .ngx-slider-limit {
+      color: $gray-1;
+      font-size: .875 * $base-size;
+      font-weight: 400;
+    }
+
+    .ngx-slider-tick.ngx-slider-selected {
+      background: $gray-1;
+    }
+  }
+}

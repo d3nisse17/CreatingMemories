@@ -1,0 +1,94 @@
+.alert {
+  /* Display & Box Model */
+  align-items: center;
+  border: none !important;
+  border-radius: 6px !important;
+  display: flex;
+  justify-content: space-between;
+
+  &-icon {
+    /* Box Model */
+    height: 1.5 * $base-size;
+    margin-right: $base-size;
+    width: 1.5 * $base-size;
+  }
+
+  &--info,
+  &-info {
+
+    &-secondary {
+      /* Color */
+      background-color: $light-purple !important;
+      color: $purple !important;
+
+      .alert-icon {
+        /* Color */
+        fill: $purple !important;
+      }  
+    }
+
+    /* Color */
+    background-color: $light-blue !important;
+    color: $brand-info !important;
+
+    .alert-icon {
+      /* Color */
+      fill: $brand-info !important;
+    }
+  }
+
+  &--warning,
+  &-warning {
+    /* Color */
+    background-color: $light-orange !important;
+    color: $brand-warning !important;
+
+    .alert-icon {
+      /* Color */
+      fill: $brand-warning !important;
+    }
+  }
+
+  &--danger,
+  &-danger {
+    /* Color */
+    background-color: $light-red !important;
+    color: $brand-danger !important;
+
+    .alert-icon {
+      /* Color */
+      fill: $brand-danger;
+    }
+  }
+
+  &--success {
+    /* Color */
+    background-color: $light-green !important;
+    color: $brand-success !important;
+
+    .alert-icon {
+      /* Color */
+      fill: $brand-success;
+    }
+  }
+
+  .close {
+    /* Color */
+    background-color: transparent;
+    border: none;
+    color: $gray;
+
+    /* Display & Box Model */
+    align-items: center;
+    display: flex;
+    height: 1.5 * $base-size;
+    overflow: hidden;
+
+    /* Text */
+    font-size: 1.5 * $base-size;
+  }
+}
+
+.alert-dismissible {
+  padding-right: 1.5 * $base-size !important;
+}

@@ -1,0 +1,103 @@
+.timer {
+  /* Display & Box Model */
+  border-radius: 0 !important;
+  display: flex;
+  height: 0.875 * $base-size !important;
+  overflow: hidden;
+  width: 100%;
+
+  /* Color */
+  background: $bg-color-1 !important;
+  border-radius: 7px !important;
+
+  // FOR AVERAGE TIME
+  .progress-bar {
+    background: $bg-color-1 !important;
+    width: min-content;
+
+    /* Text */
+    font-size: 0.625 * $base-size;
+
+    &:hover {
+      cursor: auto !important;
+    }
+  }
+
+  &--actual {
+    /* Color */
+    background: transparent !important;
+
+    /* Display & Box Model */
+    border-radius: 0 !important;
+    margin-top: -14px;
+    width: auto !important;
+
+    .progress-bar {
+      background: $navy !important;
+
+      &:hover {
+        cursor: none;
+      }
+    }
+
+    &[type="warning"] {
+      .progress-bar {
+        background: $blue !important;
+      }
+    }
+
+    &[type="danger"] {
+      .progress-bar {
+        background: $orange !important;
+      }
+    }
+  }
+
+  &--warning {
+    /* Color */
+    background: transparent !important;
+
+    /* Display & Box Model */
+    border-radius: 0 !important;
+    margin-top: -14px;
+    width: auto !important;
+
+    .progress-bar {
+      background: $blue !important;
+
+      &:hover {
+        cursor: none;
+      }
+    }
+  }
+
+  &--danger {
+    /* Color */
+    background: transparent !important;
+
+    /* Display & Box Model */
+    border-radius: 0 !important;
+    margin-top: -14px;
+    width: auto !important;
+
+    .progress-bar {
+      background: $orange !important;
+
+      &:hover {
+        cursor: none;
+      }
+    }
+  }
+
+  &--avg-time {
+    /* Color*/
+    background: transparent !important;
+
+    /* Box Model */
+    border-radius: 0 !important;
+
+    .progress-bar {
+      background: $navy-opacity-30 !important;
+    }
+  }
+}

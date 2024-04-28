@@ -1,0 +1,78 @@
+/* ******************* Radio */
+.radio-wrapper label {
+	/* Positioning */
+	position: relative;
+
+	/* Display & Box Model */
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 10px;
+
+	/* Other */
+	cursor: pointer;
+}
+
+.radio-wrapper {
+	position: relative;
+}
+
+input.radio {
+	/* Display & Box Model */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	outline: none;
+	width: 28px;
+	height: 18px;
+	display: none;
+}
+
+span.radio-icon {
+	/* Positioning */
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 999999;
+
+	/* Display & Box Model */
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: solid 1px #d6dce3;
+	background-color: #f0f3f6;
+	border-radius: 50%;
+	margin-top: 5px;
+
+	/* Other */
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+span.radio-icon:before {
+	content: "";
+	/* Positioning */
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+	position: absolute;
+	/* Display & Box Model */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #3057d5;
+	background: #f1f3f7;
+
+	/* Other */
+	transform: scale(0);
+	transition: all 0.2s ease-in-out;
+}
+
+input.radio:checked + .radio-icon {
+	background: #2f57d5;
+	border-color: #2f57d5;
+}
+
+input.radio:checked + .radio-icon:before {
+	background: #f0f3f6;
+	transform: scale(0.35);
+}

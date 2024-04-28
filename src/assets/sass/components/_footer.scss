@@ -1,0 +1,43 @@
+.page {
+  &--confirmation {
+    .page__footer {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    &--confirmation {
+      .cm-logo {
+        display: block;
+      }
+
+      .form-page-left {
+        .heading {
+          &__title {
+            color: $navy !important;
+          }
+
+          .description {
+            display: none !important;
+          }
+
+          &__illustration {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .page__footer {
+      display: block;
+      background: $navy;
+      padding: 2rem;
+
+      .description {
+        color: $gray-1 !important;
+      }
+    }
+  }
+}

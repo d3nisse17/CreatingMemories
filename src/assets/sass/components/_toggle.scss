@@ -1,0 +1,112 @@
+// SWITCH
+label.setting {
+  /* Display & Box Model */
+  display: grid;
+  grid-template-areas: "col-1 col-2 col-3";
+  grid-gap: 10px;
+  align-items: center;
+
+  /* Other */
+  cursor: pointer;
+}
+
+label.setting .on {
+  color: rgba(0, 0, 0, 0.3);
+  grid-area: col-3;
+}
+
+label.setting .icon,
+input.switch {
+  cursor: pointer;
+  grid-area: col-2;
+  justify-self: center;
+}
+
+label.setting .off {
+  color: rgba(0, 0, 0, 0.6);
+  grid-area: col-1;
+  justify-self: flex-end;
+}
+input.switch:checked + .icon {
+  background: #3057d5;
+}
+input.switch:checked ~ .on {
+  color: rgba(0, 0, 0, 0.6);
+}
+input.switch:checked ~ .off {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input.switch {
+  /* Display & Box Model */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  display: none;
+}
+
+label.setting .icon {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  width: 40px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0px 0px 4px -2px rgba(0, 0, 0, 0.1);
+
+  /* Other */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+label.setting .icon span {
+  content: "";
+  /* Positioning */
+  position: absolute;
+  left: 0;
+  top: calc(50% - 13px);
+
+  /* Display & Box Model */
+  width: 25.72px;
+  height: 25.72px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
+  transform: scale(0.7);
+
+  /* Color  */
+  background-color: #ffffff;
+
+  /* Other */
+  transition: all 0.2s ease-in-out;
+}
+
+label.setting .icon span:before {
+  content: "";
+  /* Positioning */
+  position: absolute;
+  top: calc(50% - 4px);
+  left: calc(50% - 1px);
+  /* Display & Box Model */
+
+  width: 2px;
+  height: 8px;
+  /* Color  */
+  background: blue;
+  background: #d71830;
+}
+
+input.switch:checked {
+  background: #2f57d5;
+}
+
+input.switch:checked + .icon span {
+  left: calc(100% - 25.732px);
+}
+
+input.switch:checked + .icon span:before {
+  background: #2f57d5;
+}

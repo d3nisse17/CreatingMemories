@@ -1,0 +1,7 @@
+@import "abstracts/abstracts";
+@import "base/base";
+@import "components/components";
+@import "layouts/layout";
+
+/* Importing Bootstrap SCSS file. */
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';

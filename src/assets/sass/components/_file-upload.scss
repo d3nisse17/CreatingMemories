@@ -1,0 +1,15 @@
+.upload-form {
+  height: 100%;
+
+  &__list-container {
+    /* Display & Box Model */
+    height: 90%;
+    overflow: hidden;
+
+    &__list {
+      /* Display & Box Model */
+      height: 75%;
+      width: 100%;
+    }
+  }
+}

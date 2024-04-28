@@ -1,0 +1,24 @@
+.cm-logo {
+  /* Display */
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+
+  img {
+    height: 2.2825 * $base-size;
+    width: auto;
+  }
+
+  &__type {
+    /* Text */
+    font-family: Raleway;
+    font-size: 1.5 * $base-size;
+    font-weight: 800;
+    line-height: 1.5625 * $base-size;
+    letter-spacing: 0em;
+    text-align: left;
+
+    /* Box Model */
+    margin-left: 0.5 * $base-size;
+  }
+}

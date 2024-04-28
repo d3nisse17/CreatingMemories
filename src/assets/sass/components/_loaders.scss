@@ -1,0 +1,83 @@
+.loader {
+	/* Display & Box Model */
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+
+	/* Text */
+	text-align: center;
+
+	img {
+		height: 3 * $base-size;
+		width: 3 * $base-size;
+	}
+
+	&--sm {
+		img {
+			height: 1.5 * $base-size;
+			width: 1.5 * $base-size;
+		}
+	}
+
+	&--lg {
+		img {
+			height: 5 * $base-size;
+			width: 5 * $base-size;
+		}
+	}
+
+	&--white {
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	&__title {
+		/* Color */
+		color: $navy;
+
+		/* Text */
+		font-size: 1.25 * $base-size;
+		font-weight: 700;
+
+		/* Box Model */
+		margin-bottom: 0;
+		margin-top: $base-size;
+	}
+
+	&__text {
+		/* Color */
+		color: $gray;
+
+		/* Text */
+		font-size: 0.875 * $base-size;
+		font-weight: 400;
+	}
+
+	// FOR BUTTONS
+	&--btn {
+		/* Display & Box Model */
+		display: inline-block;
+		height: auto;
+		width: auto;
+
+		/* Text */
+		text-align: center;
+
+		img {
+			/* Box Model */
+			height: 1.5 * $base-size;
+			margin-left: 0.5 * $base-size;
+			width: 1.5 * $base-size;
+		}
+
+		&--white {
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}

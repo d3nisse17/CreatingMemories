@@ -1,0 +1,84 @@
+// FORM-CHECK CHECKBOX OVERRIDE
+.form-check {
+  /* Display */
+  align-items: center;
+  display: flex !important;
+  justify-content: flex-start;
+
+  /* Other */
+  cursor: pointer;
+
+  &:disabled,
+  &.disabled {
+    .form-check-input {
+      /* Color */
+      border-color: $gray-1 !important;
+
+      /* Other */
+      opacity: 1 !important;
+      pointer-events: none !important;
+    }
+  }
+}
+
+// FOR BOTH CHECKBOX & RADIO BUTTON
+.form-check-input {
+  /* Color */
+  border-color: $dark-purple !important;
+
+  /* Display & Box Model */
+  min-width: 1.5 * $base-size !important;
+  min-height: 1.5 * $base-size !important;
+  margin-right: 0.625 * $base-size !important;
+  margin-top: 0 !important;
+
+  &:checked {
+    /* Color */
+    background-color: $white !important;
+    border-color: $dark-purple !important;
+    color: $dark-purple !important;
+  }
+
+  &:focus {
+    border-color: $dark-purple !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    /* Color */
+    border-color: $gray-1 !important;
+
+    /* Other */
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+
+  &[type="checkbox"] {
+    border-radius: 6px !important;
+  }
+
+  &[type="radio"] {
+    // stylelint-disable-next-line property-disallowed-list
+    border-radius: 50% !important;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  &:checked {
+    &[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23171436' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+    }
+
+    &[type="radio"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23171436'/%3e%3c/svg%3e") !important;
+    }
+  }
+}
+
+.form-check-label {
+  /* Color */
+  color: $dark-purple;
+}

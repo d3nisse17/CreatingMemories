@@ -1,0 +1,65 @@
+.tier-status {
+  /* Display & Box Model */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .tier-avatar {
+    margin-right: 0.5 * $base-size;
+  }
+
+  &__info {
+    /* Display & Box Model */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0.4 * $base-size;
+    align-items: center;
+    row-gap: 0.3rem;
+  }
+
+  &__label {
+    color: $gray;
+  }
+
+  &__value {
+    color: $navy;
+  }
+}
+
+.tier-avatar {
+  /* Display & Box Model */
+  align-items: center;
+  background: $bronze;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  height: 2.75 * $base-size;
+  justify-content: center;
+  width: 2.75 * $base-size;
+
+  &--unqualified {
+    background: $white;
+    border: 1px solid $gray-lighter
+  }
+
+  &--bronze {
+    background: $bronze;
+  }
+
+  &--silver {
+    background: $silver;
+  }
+
+  &--gold {
+    background: $gold;
+  }
+
+  &--platinum {
+    background: $platinum;
+  }
+
+  img {
+    width: 1.1875 * $base-size;
+  }
+}

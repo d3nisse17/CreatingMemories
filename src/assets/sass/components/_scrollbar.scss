@@ -1,0 +1,28 @@
+// SCROLLBAR
+// SCROLLBAR layout
+::-webkit-scrollbar {
+  width: 0.5 * $base-size;
+  height: 0.5 * $base-size;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $gray-2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($gray, 0.25);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($gray, 0.5);
+}
+
+// HUBSPOT MODAL
+.hubspot-connection {
+  .modal-content {
+    border-radius: 20px;
+  }
+}

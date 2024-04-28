@@ -1,0 +1,45 @@
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+  }
+  
+  /* Navigation Styles */
+  .top-nav__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .top-nav__navigation {
+      display: none;
+    }
+    
+    .hamburger-icon {
+      display: flex;
+    }
+  }
+
+  .top-nav__content {
+    @media (max-width: 768px) {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      margin: 0 0.5rem;
+      padding: 0;
+      width: 100%;
+    }
+}
+  

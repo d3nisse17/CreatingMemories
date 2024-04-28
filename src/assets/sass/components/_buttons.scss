@@ -1,0 +1,552 @@
+@import "../base/variables";
+
+button,
+a {
+  /* Other */
+  cursor: pointer;
+  outline: none !important;
+  user-select: none !important;
+}
+
+button {
+  &.disabled,
+  &:disabled {
+    /* Other */
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+}
+
+.btn-group {
+  height: 2.375 * $base-size;
+}
+
+a {
+  /* Color  */
+  color: $brand-secondary !important;
+
+  /* Text */
+  text-decoration: none !important;
+
+  /* Other */
+  cursor: pointer;
+}
+
+.btn {
+  /* Display & Box Model */
+  border-radius: 6px !important;
+  padding: 0.5 * $base-size 1.5 * $base-size;
+
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 0.875 * $base-size !important;
+  line-height: 28px;
+
+  /* Other */
+  cursor: pointer;
+
+  // SMALLER GOOGLE ICON IN LOGIN PAGE
+  &__icon {
+    /* Box Model */
+    margin-right: 0.5 * $base-size;
+    width: 1.5 * $base-size;
+  }
+
+  // COLORS
+  // PRIMARY BUTTON - ORANGE
+  &.btn-primary {
+    /* Display & Box Model */
+    border: 1px solid $brand-secondary;
+
+    /* Color  */
+    background-color: $brand-secondary;
+    color: $white !important;
+
+    &:hover,
+    &:focus,
+    &:disabled {
+      /* Color */
+      color: $white !important;
+
+      /* Box Model */
+      border: 1px solid $brand-secondary;
+    }
+
+    &:hover {
+      background-color: $brand-secondary !important;
+    }
+
+    &:focus,
+    &:active,
+    &.active {
+      /* Color */
+      background-color: $dark-orange !important;
+
+      /* Box Model */
+      box-shadow: none !important;
+      outline: 0 none !important;
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      /* Color */
+      background-color: $orange !important;
+      color: $white !important;
+      
+      /* Box Model */
+      border: none;
+
+      /* Other */
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    &--bordered {
+      /* Color */
+      background-color: transparent;
+      color: $brand-secondary !important;
+
+      /* Box Model */
+      border: 1px solid $brand-secondary;
+
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: $gray !important;
+        color: $white !important;
+
+        /* Box Model */
+        border: 1px solid $gray;
+
+        /* Other */
+        opacity: 1;
+        pointer-events: none;
+      }
+    }
+
+    &--light {
+      /* Color */
+      background-color: transparent;
+      color: $brand-secondary !important;
+
+      /* Box Model */
+      border: none;
+
+      &:hover,
+      &:focus,
+      &:disabled {
+        /* Box Model */
+        border: none;
+
+        /* Color */
+        color: $brand-secondary !important;
+      }
+
+      &:hover {
+        background-color: $yellow-opacity-18 !important;
+      }
+
+      &:focus,
+      &:active,
+      &.active {
+        /* Color */
+        background-color: transparent !important;
+
+        /* Box Model */
+        box-shadow: none !important;
+
+        /* Other */
+        outline: 0 none !important;
+      }
+
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: transparent !important;
+        color: $gray !important;
+
+        /* Box Model */
+        border: none;
+
+        /* Other */
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+
+    &--big {
+      /* Box Model */
+      height: 3.625 * $base-size;
+      width: 100%;
+
+      /* Text */
+      font-size: $base-size !important;
+
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: $gray !important;
+        color: $white !important;
+
+        /* Box Model */
+        border: 1px solid $gray;
+
+        /* Other */
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+
+    &--medium {
+      /* Box Model */
+      height: 3.35 * $base-size;
+      width: 100%;
+      /* Text */
+      font-size: $base-size !important;
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: $gray !important;
+        color: $white !important;
+        /* Box Model */
+        border: 1px solid $gray;
+        /* Other */
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  // SECONDARY BUTTON - NAVY/DARK PURPLE
+  &.btn-secondary {
+    /* Box Model */
+    border: 1px solid $dark-purple;
+
+    /* Color  */
+    background-color: $dark-purple;
+    color: $white !important;
+
+    &:hover,
+    &:focus,
+    &:disabled {
+      /* Box Model */
+      border: 1px solid $dark-purple;
+
+      /* Color  */
+      color: $white !important;
+    }
+
+    &:hover {
+      background-color: $dark-purple !important;
+    }
+
+    &:focus,
+    &:active,
+    &.active {
+      /* Color */
+      background-color: $navy !important;
+
+      /* Box Model */
+      outline: 0 none !important;
+      box-shadow: none !important;
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      /* Color */
+      background-color: transparent !important;
+      color: $gray !important;
+
+      /* Box Model */
+      border: none;
+
+      /* Other */
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    &--bordered {
+      /* Color */
+      background-color: transparent;
+      color: $dark-purple !important;
+
+      /* Box Model */
+      border: 1px solid $dark-purple;
+    }
+
+    &--light {
+      /* Color */
+      background-color: transparent;
+      color: $dark-purple !important;
+
+      /* Box Model */
+      border: none;
+
+      &:hover,
+      &:focus,
+      &:disabled {
+        /* Color */
+        color: $dark-purple !important;
+
+        /* Box Model */
+        border: none;
+      }
+
+      &:hover {
+        background-color: $light-purple !important;
+      }
+
+      &:focus,
+      &:active,
+      &.active {
+        /* Color */
+        background-color: $dark-purple !important;
+        color: $white !important;
+
+        /* Box Model */
+        box-shadow: none !important;
+        outline: 0 none !important;
+      }
+
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: transparent !important;
+        color: $gray !important;
+
+        /* Box Model */
+        border: none;
+
+        /* Other */
+        opacity: 1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.btn-danger {
+    background-color: $red !important;
+    color: $white !important;
+    border: none !important;
+
+    &--medium {
+      /* Box Model */
+      height: 3.35 * $base-size;
+      width: 100%;
+      /* Text */
+      font-size: $base-size !important;
+      &:disabled,
+      &.disabled,
+      fieldset:disabled & {
+        /* Color */
+        background-color: $gray !important;
+        color: $white !important;
+        /* Box Model */
+        border: 1px solid $gray;
+        /* Other */
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.btn-success {
+    background-color: $light-green !important;
+    color: $green !important;
+    border: none !important;
+  }
+
+  // BORDERED BUTTON - SPECIAL ICON BUTTON [BIG]
+  &.btn-bordered {
+    /* Color */
+    background-color: transparent;
+    color: $dark-purple !important;
+
+    /* Box Model */
+    border: 1px solid $dark-purple !important;
+    height: 3.625 * $base-size;
+
+    &:hover {
+      background-color: $bg-color;
+    }
+
+    &:focus,
+    &:active,
+    &.active {
+      /* Box Model */
+      border: 2px solid !important;
+      box-shadow: none !important;
+      outline: 0 none !important;
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      /* Color */
+      background-color: transparent !important;
+      color: $dark-purple !important;
+
+      /* Box Model */
+      border: 1px solid $dark-purple;
+
+      /* Other */
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    &--orange {
+      /* Box Model */
+      border: 1px solid $dark-orange !important;
+
+      /* Color */
+      color: $dark-orange !important
+    }
+  }
+
+  // LIGHT BUTTON - FOR A LIGHT BG BUTTON [BIG]
+  &.btn-light {
+    /* Color */
+    background-color: $bg-color;
+    color: $dark-purple !important;
+
+    /* Box Model */
+    border: none !important;
+    height: 3.625 * $base-size;
+
+    &:hover {
+      /* Color */
+      background-color: $bg-color;
+      color: $navy !important;
+    }
+
+    &:focus,
+    &:active,
+    &.active {
+      /* Color */
+      border: 2px solid $dark-purple !important;
+      color: $dark-purple !important;
+
+      /* Box Model */
+      outline: 0 none !important;
+      box-shadow: none !important;
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      /* Color */
+      background-color: $bg-color;
+      color: $gray !important;
+
+      /* Box Model */
+      border: none;
+
+      /* Other */
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  // TO MAKE BUTTONS FULL WIDTH
+  &.btn-block {
+    width: 100%;
+  }
+
+  // TO MAKE DEFAULT BUTTONS BIGGER
+  &.btn-big {
+    /* Display & Box Model */
+    height: 3.625 * $base-size;
+    width: 100%;
+
+    /* text */
+    font-size: $base-size !important;
+  }
+
+  // FOR BUTTONS WITH ICONS ONLY & TRANSPARENT BG
+  &.btn-icon {
+    /* Color */
+    background-color: transparent !important;
+    color: $dark-purple !important;
+
+    /* Display & Box Model */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+    &:focus,
+    &:active,
+    &.active {
+      /* Box Model */
+      outline: 0 none !important;
+      box-shadow: none !important;
+    }
+
+    i-feather {
+      /* Color */
+			color: $dark-purple;
+
+      /* Box Model */
+			width: 1.25 * $base-size;
+		}
+  }
+
+  // FOR BUTTONS WITH TRANSPARENT BG
+  &.btn-link {
+    /* Color */
+    background-color: transparent !important;
+    color: $brand-secondary !important;
+
+    /* Display & Box Model */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 !important;
+    margin-top: $base-size;
+
+    /* Text */
+    text-decoration: none !important;
+  
+    &:focus,
+    &:active,
+    &.active {
+      /* Box Model */
+      outline: 0 none !important;
+      box-shadow: none !important;
+    }
+
+    i-feather {
+      /* Color */
+			color: $brand-secondary;
+
+      /* Box Model */
+      margin-right: .625 * $base-size;
+      width: 1.25 * $base-size;
+		}
+  }
+
+  &.btn-back {
+    margin-bottom: 2.625 * $base-size;
+  }
+}
+
+// FOR START BUTTON IN ASSEMLY LINES PREVIEW
+.btn-start {
+  &-mobile {
+    margin: 1.5 * $base-size 0;
+  }
+
+  &-desktop {
+    margin: 2 * $base-size 0;
+  }
+}
+
+
