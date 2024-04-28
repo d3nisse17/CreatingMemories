@@ -75,7 +75,8 @@ export class MainComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    sessionStorage.removeItem('tour-package')
+    sessionStorage.removeItem('tour-package');
+    this.scrollTo('main-header');
   }
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel | undefined;

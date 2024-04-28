@@ -21,6 +21,7 @@ export class TourDetailsComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.scrollTo('package-header');
     const sessionPackage = JSON.parse(sessionStorage.getItem('tour-package') as string) as TourPackages;
     if(!!sessionPackage) {
       this.tourPackages = sessionPackage;
