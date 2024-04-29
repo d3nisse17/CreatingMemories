@@ -7,8 +7,6 @@ import { TourDetailsComponent } from './tour-details/tour-details.component';
 import { TopNavComponent } from '../_shared/top-nav/top-nav.component';
 import { FooterComponent } from '../_shared/footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 
 @NgModule({
   declarations: [MainComponent],
@@ -21,8 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TourDetailsComponent,
     TopNavComponent,
     FooterComponent,
-    ContactUsComponent,
-    FontAwesomeModule
+    ContactUsComponent
   ],
   providers: [],
   bootstrap: []

@@ -7,12 +7,11 @@ import { TourDetailsComponent } from './main/tour-details/tour-details.component
 import { MainModule } from './main/main.module';
 import { ContactUsComponent } from './main/contact-us/contact-us.component';
 import { AllInOneToursComponent } from './main/all-in-one-tours/all-in-one-tours.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainRoutingComponent, TourDetailsComponent, MainModule, ContactUsComponent, AllInOneToursComponent, FontAwesomeModule],
+  imports: [RouterOutlet, MainRoutingComponent, TourDetailsComponent, MainModule, ContactUsComponent, AllInOneToursComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
