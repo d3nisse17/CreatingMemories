@@ -34,6 +34,19 @@
         }
     }
 
+    &__tour-img-container {
+        display: contents;
+        margin-left: 2in;
+        margin-right: 2in;
+        margin-top: 0.5in;
+        margin-bottom: 0.5in;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            margin-left: 0in;
+            margin-right: 0in;
+            margin-top: 0in;
+        }
+    }
+
     &__info {
         display: flex;
         justify-content: center;
@@ -69,7 +82,25 @@
     }
 }
 
+.day-tour {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr); /* Two columns with equal width */
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    }
+}
+
 .package-img {
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.tour-package-img {
+    height: 20rem;
+    padding-bottom: 0.2in;
     @media (max-width: 768px) { /* Adjust breakpoint as needed */
         width: 100%; /* Make the image fill the container */
         height: auto; /* Maintain aspect ratio */

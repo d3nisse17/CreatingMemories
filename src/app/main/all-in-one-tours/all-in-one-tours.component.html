@@ -18,9 +18,38 @@
             <div class="tour-day-itinerary">
                 <div class="tour-details__tour-itinerary" *ngFor="let tour of tourPackages.tourItinerary">
                     <h3 class="tour-details__tour-itinerary--time"><img src="assets/icons/map-pin.svg"> {{tour.day}}</h3>
-                    <h4 class="tour-details__tour-itinerary--title">{{tour.tourTitle}}</h4>
-                    <div class="tour-details__tour-itinerary--place" *ngFor="let place of tour.places">
-                        <span><img src="assets/icons/tree.png"> {{place}}</span>
+                    <div class="day-tour" *ngIf="tour.day === 'Day 2'">
+                        <div class="tour__tour-img-container">
+                            <img class="tour-package-img" [src]="tour.tourImg">
+                        </div>
+                        <div>
+                            <h4 class="tour-details__tour-itinerary--title">{{tour.tourTitle}}</h4>
+                            <div class="tour-details__tour-itinerary--place" *ngFor="let place of tour.places">
+                                <span><img src="assets/icons/tree.png"> {{place}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-tour" *ngIf="tour.day === 'Day 3'">
+                        <div>
+                            <h4 class="tour-details__tour-itinerary--title">{{tour.tourTitle}}</h4>
+                            <div class="tour-details__tour-itinerary--place" *ngFor="let place of tour.places">
+                                <span><img src="assets/icons/tree.png"> {{place}}</span>
+                            </div>
+                        </div>
+                        <div class="tour__tour-img-container" *ngIf="!!tour.tourImg">
+                            <img class="tour-package-img" [src]="tour.tourImg">
+                        </div>
+                    </div>
+                    <div class="day-tour" *ngIf="tour.day !== 'Day 3' && tour.day !== 'Day 2'">
+                        <div class="tour__tour-img-container" *ngIf="!!tour.tourImg">
+                            <img class="tour-package-img" [src]="tour.tourImg">
+                        </div>
+                        <div>
+                            <h4 class="tour-details__tour-itinerary--title">{{tour.tourTitle}}</h4>
+                            <div class="tour-details__tour-itinerary--place" *ngFor="let place of tour.places">
+                                <span><img src="assets/icons/tree.png"> {{place}}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

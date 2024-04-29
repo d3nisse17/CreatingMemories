@@ -57,8 +57,9 @@
 }
 
 .services-container {
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
     gap: 20px; /* Adjust the gap between grid items */
 
     @media (max-width: 768px) { /* Adjust breakpoint as needed */
@@ -135,6 +136,7 @@
         &--place {
             display: grid;
             color: #0097b2;
+            justify-content: center;
         }
         h4 {
             color: #ffbd59;

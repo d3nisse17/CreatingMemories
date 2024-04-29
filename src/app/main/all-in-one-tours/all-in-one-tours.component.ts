@@ -21,11 +21,13 @@ export class AllInOneToursComponent implements OnInit {
       title: '4 Days and 3 nights El Nido Tour',
       price: 'For only Php6500/Head',
       tourItinerary: [{
+        tourImg:'',
         day: 'Day 1',
         tourTitle: 'Arrival at Puerto Princesa City International Airport and Traveling to El Nido',
         places: []
       },
       {
+        tourImg:'assets/images/TourA.png',
         day: 'Day 2',
         tourTitle:'ISLAND HOPPING TOUR A',
         places: [
@@ -37,6 +39,7 @@ export class AllInOneToursComponent implements OnInit {
         ]
       },
       {
+        tourImg:'assets/images/TourC.png',
         day: 'Day 3',
         tourTitle:'ISLAND HOPPING TOUR C',
         places: [
@@ -48,6 +51,7 @@ export class AllInOneToursComponent implements OnInit {
         ]
       },
       {
+        tourImg:'',
         day: 'Day 4',
         tourTitle:'Travel from El Nido to Puerto Princesa City International Airport',
         places: []

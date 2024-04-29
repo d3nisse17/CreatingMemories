@@ -15,6 +15,7 @@ export interface AllInOneTourPackages {
 }
 
 export interface TourItinerary {
+    tourImg: string;
     day: string;
     tourTitle: string;
     places: Array<string>;

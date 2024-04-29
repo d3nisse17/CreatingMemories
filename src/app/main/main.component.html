@@ -34,21 +34,54 @@
 
     <div class="services" id="packages">
         <h1 class="services-title">OUR SERVICES</h1>
-        <div class="services-container">
-            <div class="service">
-                <div class="service-header">
-                    <h3 class="service-title">Tours</h3>
-                </div>
-                <div class="service-details__service-itinerary">
-                    <div class="service-details__service-itinerary--place">
-                        <span>• Underground River Tour</span>
-                        <span>• Inland Tour El Nido</span>
-                        <span>• Island Hopping El Nido</span>
-                        <span>• Island Hopping Coron</span>
-                        <span>• Island Hopping Port Barton</span>
+        <div class="packages">
+            <div>
+                <h2 class="package-subtitle">Tours</h2>
+                <div class="tour-container">
+                    <div class="tour">
+                        <div class="tour__img-container">
+                            <img class="package-img" src="assets/images/12.png">>
+                        </div>
+                        <div class="tour-header">
+                            <h3 class="tour-title">• Underground River Tour</h3>
+                        </div>
+                    </div>
+                    <div class="tour">
+                        <div class="tour__img-container">
+                            <img class="package-img" src="assets/images/13.png">>
+                        </div>
+                        <div class="tour-header">
+                            <h3 class="tour-title">• Inland Tour El Nido</h3>
+                        </div>
+                    </div>
+                    <div class="tour">
+                        <div class="tour__img-container">
+                            <img class="package-img" src="assets/images/14.png">>
+                        </div>
+                        <div class="tour-header">
+                            <h3 class="tour-title">• Island Hopping El Nido</h3>
+                        </div>
+                    </div>
+                    <div class="tour">
+                        <div class="tour__img-container">
+                            <img class="package-img" src="assets/images/15.png">>
+                        </div>
+                        <div class="tour-header">
+                            <h3 class="tour-title">• Island Hopping Coron</h3>
+                        </div>
+                    </div>
+                    <div class="tour">
+                        <div class="tour__img-container">
+                            <img class="package-img" src="assets/images/16.png">>
+                        </div>
+                        <div class="tour-header">
+                            <h3 class="tour-title">• Island Hopping Port Barton</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <div>
+        </div>
+        <div class="services-container">
             <div class="service">
                 <div class="service-header">
                     <h3 class="service-title">Van Transfer</h3>
@@ -85,27 +118,28 @@
     <!-- TOURS CARD -->
     <div class="package" id="packages">
         <h1 class="package-title">TOURS AND PACKAGES</h1>
-        <div class="ultimate-tour" *ngFor="let tour of allInOneTourPackages">
-            <div class="tour__img-container">
-                <img class="package-img" [src]="tour.img">
-            </div>
-            <div class="ultimate-tour-header">
-                <h3 class="tour-title">{{tour.title}} - <span class="tour-price">{{tour.price}} </span></h3>
-            </div>
-            <div class="package-button-container">
-                <button class="package-button-container__button" (click)="goToAllInOnePackage(tour)">View Package Details</button>
-            </div>
-        </div>
-        <div class="package-container">
-            <div class="tour" *ngFor="let tour of tourPackages">
+            <div class="ultimate-tour" *ngFor="let tour of allInOneTourPackages">
                 <div class="tour__img-container">
                     <img class="package-img" [src]="tour.img">
                 </div>
-                <div class="tour-header">
+                <div class="ultimate-tour-header">
                     <h3 class="tour-title">{{tour.title}} - <span class="tour-price">{{tour.price}} </span></h3>
                 </div>
                 <div class="package-button-container">
-                    <button class="package-button-container__button" (click)="goToPackage(tour)">View Package Details</button>
+                    <button class="package-button-container__button" (click)="goToAllInOnePackage(tour)">View Package Details</button>
+                </div>
+            </div>
+            <div class="package-container">
+                <div class="tour" *ngFor="let tour of tourPackages">
+                    <div class="tour__img-container">
+                        <img class="package-img" [src]="tour.img">
+                    </div>
+                    <div class="tour-header">
+                        <h3 class="tour-title">{{tour.title}} - <span class="tour-price">{{tour.price}} </span></h3>
+                    </div>
+                    <div class="package-button-container">
+                        <button class="package-button-container__button" (click)="goToPackage(tour)">View Package Details</button>
+                    </div>
                 </div>
             </div>
         </div>

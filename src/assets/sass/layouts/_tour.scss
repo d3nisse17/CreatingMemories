@@ -8,9 +8,22 @@
     }
 }
 
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+    gap: 20px; /* Adjust the gap between grid items */
+
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    }
+}
+
 .tour {
     background-color: rgba(43, 208, 202, 0.1);
-    padding: 0.5in;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
+    padding-bottom: 0.5in;
+    padding-top: 0.1in;
     border-radius: 0.5rem;
     overflow: hidden; 
     .tour-details {
@@ -135,6 +148,17 @@
     color: #085457;
     font-weight: bold;
     padding-bottom: 10px;
+}
+
+.package-subtitle {
+    text-align: center;
+    color: #085457;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-top: 0.5in;
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        font-size: calc(1.1rem + 0.6vw) !important;
+    }
 }
 
 .package-button-container {
