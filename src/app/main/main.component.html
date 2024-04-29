@@ -10,11 +10,13 @@
             </ng-template>
         </ngb-carousel>
     </div>
+
+    <!-- MESSAGE CARD -->
     <div class="message-container" id="message">
         <h1 class="message-title">🌴 Create new memories with Our El Nido Tours! 🌴</h1>
         <div class="message">
             <p class="message__content">
-                Explore the world with Creating Memories Travel and Tours. Let us turn your dreams into unforgettable adventures. Book your next journey today and start creating memories that last a lifetime.
+                Explore the world with Creating Memories Travel and Tours. Let us turn your dreams into unforgettable adventures. Book your next journey today and start creating memories with families and friends that last a lifetime.
             </p>
             <p class="message__content">
                 Embark on an unforgettable journey to the breathtaking beauty of El Nido with our curated selection of tours. Nestled in the Philippines, El Nido boasts pristine beaches, crystal-clear waters, and stunning limestone cliffs, making it a dream destination for travelers seeking serenity and adventure.
@@ -27,8 +29,73 @@
             </p>
         </div>
     </div>
+
+    <!-- SERVICES CARD -->
+
+    <div class="services" id="packages">
+        <h1 class="services-title">OUR SERVICES</h1>
+        <div class="services-container">
+            <div class="service">
+                <div class="service-header">
+                    <h3 class="service-title">Tours</h3>
+                </div>
+                <div class="service-details__service-itinerary">
+                    <div class="service-details__service-itinerary--place">
+                        <span>• Underground River Tour</span>
+                        <span>• Inland Tour El Nido</span>
+                        <span>• Island Hopping El Nido</span>
+                        <span>• Island Hopping Coron</span>
+                        <span>• Island Hopping Port Barton</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-header">
+                    <h3 class="service-title">Van Transfer</h3>
+                </div>
+                <div class="service-details__service-itinerary">
+                    <div class="service-details__service-itinerary--place">
+                        <h4>Puerto Princesa (Vice Versa): </h4>
+                        <span>1. El Nido</span>
+                        <span>2. Nacpan</span>
+                        <span>3 Coron</span>
+                        <span>4. Port Barton</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-header">
+                    <h3 class="service-title">Other Services</h3>
+                </div>
+                <div class="service-details__service-itinerary">
+                    <div class="service-details__service-itinerary--place">
+                        <span>• Ferry to Coron</span>
+                        <span>• Expedition Tour</span>
+                        <span>• Canopy Walk</span>
+                        <span>• Taraw Cliff Climbing</span>
+                        <span>• Motor Bike Rental</span>
+                        <span>• Massage Service</span>
+                        <span>• Airline Ticketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- TOURS CARD -->
     <div class="package" id="packages">
         <h1 class="package-title">TOURS AND PACKAGES</h1>
+        <div class="ultimate-tour" *ngFor="let tour of allInOneTourPackages">
+            <div class="tour__img-container">
+                <img class="package-img" [src]="tour.img">
+            </div>
+            <div class="ultimate-tour-header">
+                <h3 class="tour-title">{{tour.title}} - <span class="tour-price">{{tour.price}} </span></h3>
+            </div>
+            <div class="package-button-container">
+                <button class="package-button-container__button" (click)="goToAllInOnePackage(tour)">View Package Details</button>
+            </div>
+        </div>
         <div class="package-container">
             <div class="tour" *ngFor="let tour of tourPackages">
                 <div class="tour__img-container">
@@ -43,30 +110,8 @@
             </div>
         </div>
     </div> 
-    <div class="message-container" id="contact-us">
-        <h1 class="message-title">Contact us for Bookings and Inquiries</h1>
-        <div class="contact-us">
-            <div class="contact-us__content">
-                <span class="contact-us__title">Contact Number: </span> 
-                <div class="contact-us__number">
-                    <span>09664427906 - Globe </span>
-                    <span>09616434454 - Smart </span>
-                </div>
-            </div>
-            <div class="contact-us__content">
-                <span  class="contact-us__title">Email Address: </span> <span>creatingmemories1967&#64;gmail.com</span>
-            </div>
-            <div class="contact-us__content">
-                <span  class="contact-us__title">Office Address: </span> <span>Pops District Brgy. Corong Corong El Nido Palawan, Philippines</span>
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Pops District Brgy. Corong Corong El Nido Palawan, Philippines&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                        <a href="https://embed-googlemap.com">embed google map</a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+
+    <!-- CONTACT US CARD -->
+    <app-contact-us></app-contact-us>
     <button class="sticky-button" (click)="scrollTo('contact-us')">Contact Us</button>
     <app-footer></app-footer>

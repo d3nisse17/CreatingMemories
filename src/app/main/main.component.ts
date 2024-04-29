@@ -15,7 +15,7 @@ import { TourPackages } from '../_shared/models/tour.model';
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements OnInit {
-  images = ['assets/images/header.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png']
+  images = ['assets/images/details.jpg','assets/images/header.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png']
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
@@ -70,12 +70,20 @@ export class MainComponent implements OnInit {
         'Bukal Island',
       ]
     }
-  ]
+  ];
+  allInOneTourPackages = [
+    {
+      img: 'assets/images/4d3nTour.png',
+      title: '4 Days and 3 nights El Nido Tour',
+      price: 'For only Php6500/Head'
+    }
+  ];
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
     sessionStorage.removeItem('tour-package');
+    sessionStorage.removeItem('all-in-one-tour-package');
     this.scrollTo('main-header');
   }
 
@@ -111,6 +119,11 @@ export class MainComponent implements OnInit {
   goToPackage(tour: TourPackages) {
     sessionStorage.setItem('tour-package',JSON.stringify(tour));
     this.router.navigate(['/tour-details',tour.title]);
+  }
+
+  goToAllInOnePackage(tour: any) {
+    sessionStorage.setItem('all-in-one-tour-package',JSON.stringify(tour));
+    this.router.navigate(['/all-in-one-tours',tour.title]);
   }
 
   goToContactUs() {

@@ -1,0 +1,56 @@
+<app-top-nav></app-top-nav>
+<div class="package" id="package-header">
+    <div class="tour">
+        <div class="tour__back-button" (click)="back()">
+            <img src="assets/icons/arrow-left.svg"> Back
+        </div>
+        <div class="tour-header">
+            <h1 class="tour-title">{{tourPackages.title}} - <span class="tour-price">{{tourPackages.price}}</span></h1>
+        </div>
+        <div class="tour__img-container">
+            <img class="package-img" [src]="tourPackages.img">
+        </div>
+        <div class="tour__info">
+            <span>Note: Minimum of 2 pax to book</span>
+        </div>
+        <h3 class="tour-day-itinerary-title">Itinerary</h3>
+        <div class="tour-day-itinerary-container">
+            <div class="tour-day-itinerary">
+                <div class="tour-details__tour-itinerary" *ngFor="let tour of tourPackages.tourItinerary">
+                    <h3 class="tour-details__tour-itinerary--time"><img src="assets/icons/map-pin.svg"> {{tour.day}}</h3>
+                    <h4 class="tour-details__tour-itinerary--title">{{tour.tourTitle}}</h4>
+                    <div class="tour-details__tour-itinerary--place" *ngFor="let place of tour.places">
+                        <span><img src="assets/icons/tree.png"> {{place}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tour-details">
+            <div class="tour-details__tour-inclusion">
+                <h3>Inclusions</h3>
+                <div class="tour-details__tour-itinerary--place" *ngFor="let inclusion of tourPackages.inclusion">
+                    <span><img src="assets/icons/check-circle.svg"> {{inclusion}}</span>
+                </div>
+            </div>
+            <div class="tour-details__tour-inclusion">
+                <h3>Exclusions</h3>
+                <div class="tour-details__tour-itinerary--place" *ngFor="let exclusion of tourPackages.exclusion">
+                    <span><img src="assets/icons/x.svg"> {{exclusion}}</span>
+                </div>
+            </div>
+            <div class="tour-details__tour-itinerary">
+                <h3>What to bring</h3>
+                <div class="tour-details__tour-itinerary--place">
+                    <span>• Sunscreen</span>
+                    <span>• Sunglasses</span>
+                    <span>• Caps or hats</span>
+                    <span>• Swimwear</span>
+                    <span>• Change of Clothes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-contact-us></app-contact-us>
+<button class="sticky-button" (click)="scrollTo('contact-us')">Contact Us</button>
+<app-footer></app-footer>

@@ -60,6 +60,14 @@
         }
     }
 
+    &__info {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        font-style: italic;
+        font-weight: 700;
+    }
+
     &__back-button {
         cursor: pointer;
         @media (max-width: 768px) { /* Adjust breakpoint as needed */
@@ -112,10 +120,30 @@
         &--time {
             color: #7ed957;
         }
+        &--title {
+            color: #085457;
+            font-weight: bold;
+        }
     }
     &__tour-inclusion {
         font-size: medium;
         font-weight: bold;
         padding-top: 10px;
+        max-width: 25rem;
     }
+}
+
+.tour-day-itinerary-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tour-day-itinerary {
+    padding-top: 10px;
+}
+
+.tour-day-itinerary-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2in;
 }

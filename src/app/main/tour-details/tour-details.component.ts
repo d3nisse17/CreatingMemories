@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../_shared/footer/footer.component';
 import { Router } from '@angular/router';
 import { TourPackages } from '../../_shared/models/tour.model';
+import { ContactUsComponent } from '../contact-us/contact-us.component';
 
 @Component({
   selector: 'app-tour-details',
@@ -12,6 +13,7 @@ import { TourPackages } from '../../_shared/models/tour.model';
     TopNavComponent,
     CommonModule,
     FooterComponent,
+    ContactUsComponent
   ],
   templateUrl: './tour-details.component.html',
   styleUrl: './tour-details.component.scss'
@@ -37,7 +39,6 @@ export class TourDetailsComponent implements OnInit {
   }
 
   scrollTo(section: string): void {
-    debugger
     document.getElementById(section)?.scrollIntoView({
       behavior: 'smooth'
     });

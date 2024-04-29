@@ -6,6 +6,8 @@ import { MainRoutingComponent } from './main.routes';
 import { TourDetailsComponent } from './tour-details/tour-details.component';
 import { TopNavComponent } from '../_shared/top-nav/top-nav.component';
 import { FooterComponent } from '../_shared/footer/footer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FooterComponent } from '../_shared/footer/footer.component';
     NgbAccordionModule,
     TourDetailsComponent,
     TopNavComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: []
