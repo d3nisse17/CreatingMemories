@@ -1,0 +1,159 @@
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 20px; /* Adjust the gap between grid items */
+
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    }
+}
+
+.tour {
+    background-color: rgba(43, 208, 202, 0.1);
+    padding: 0.5in;
+    border-radius: 0.5rem;
+    overflow: hidden; 
+    .tour-details {
+        max-height: none; /* Initially collapse the content */
+        transition: max-height 0.3s ease; /* Smooth transition */
+    }
+
+    &.expanded .tour-details {
+        max-height: none; /* Expand the content when the accordion is expanded */
+    }
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        padding: 0in;
+    }
+
+    &__img-container {
+        justify-content: center;
+        display: flex;
+        margin-left: 2in;
+        margin-right: 2in;
+        margin-top: 0.5in;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            margin-left: 0.5in;
+            margin-right: 0.5in;
+            margin-top: 0.1in;
+        }
+    }
+}
+
+.tour-header {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+
+    .tour-title {
+        color: #085457;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            font-size: calc(1.1rem + 0.6vw) !important;
+        }
+    }
+
+    .tour-price {
+        color: #ffbd59;
+    }
+}
+
+.ultimate-tour {
+    background-color: rgba(43, 208, 202, 0.1);
+    padding: 0.5in;
+    border-radius: 0.5rem;
+    overflow: hidden; 
+    margin-bottom: 0.2in;
+    .tour-details {
+        max-height: none; /* Initially collapse the content */
+        transition: max-height 0.3s ease; /* Smooth transition */
+    }
+
+    &.expanded .tour-details {
+        max-height: none; /* Expand the content when the accordion is expanded */
+    }
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        padding: 0in;
+        padding-bottom: 20px;
+    }
+
+    &__img-container {
+        justify-content: center;
+        display: flex;
+        margin-left: 2in;
+        margin-right: 2in;
+        margin-top: 0.5in;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            margin-left: 0.5in;
+            margin-right: 0.5in;
+            margin-top: 0.1in;
+        }
+    }
+}
+
+.ultimate-tour-header {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: center;
+    }
+
+    .tour-title {
+        color: #085457;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            font-size: calc(1.1rem + 0.6vw) !important;
+        }
+    }
+
+    .tour-price {
+        color: #ffbd59;
+    }
+}
+
+.package-img {
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.package {
+    // background-color: rgba(43, 208, 202, 0.2);
+    padding: 0.5in;
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        padding-left: 0in;
+        padding-right: 0in;
+    }
+}
+
+.package-title {
+    text-align: center;
+    color: #085457;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.package-button-container {
+    display: flex;
+    justify-content: center;
+    &__button {
+        padding: 20px 30px;
+        background-color: #ffbd59;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            padding: 10px 20px;
+            font-size: large;
+            margin-bottom: 0.1in;
+        }
+    }
+}

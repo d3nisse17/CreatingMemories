@@ -1,0 +1,25 @@
+.sticky-button {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    padding: 20px 30px;
+    background-color: #085457; /* Adjust the color as needed */
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        right: 10px;
+        position: fixed;
+        z-index: 9999;
+        padding: 10px 20px;
+    }
+}
+
+.sticky-button:hover {
+    background-color: #085457; /* Darker color on hover */
+}
