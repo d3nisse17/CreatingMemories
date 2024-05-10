@@ -75,7 +75,7 @@ export class AllInOneToursComponent implements OnInit {
       'Note: Airfare NOT included in the Package',
       'Drop Service after tour (El Nido)',
       'Centralized Kayak',
-      'Eco-Tourism Development Fund (ETDF) of Php 200/head',
+      'Eco-Tourism Development Fund (ETDF) of Php 400/head',
       'Snorkeling mask and gears',
       'Other personal expenses'
     ]
