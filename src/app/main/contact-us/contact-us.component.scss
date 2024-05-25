@@ -35,6 +35,26 @@
     &__number {
         display: grid;
     }
+
+    &__img-container {
+        justify-content: center;
+        display: flex;
+        margin-left: 2in;
+        margin-right: 2in;
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            margin-left: 0in;
+            margin-right: 0in;
+            margin-top: 0in;
+        }
+    }
+}
+
+.package-img {
+    height: 600px;
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 
 .mapouter {
